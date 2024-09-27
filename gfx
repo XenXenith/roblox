@@ -1,250 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roblox Avatar GFX Creation</title>
+    <title>BC King's Commissions and Services</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            color: #333333;
         }
 
         .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
             width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 20px;
+            background-color: #444444;
+            color: #ffffff;
+            padding: 20px 0;
         }
 
         .header h1 {
-            font-size: 24px;
             margin: 0;
-            color: #ff4500;
+            font-size: 36px;
+            color: #f4f4f4;
         }
 
-        .header p {
-            font-size: 14px;
-            color: #555;
-        }
-
-        .option {
-            margin-bottom: 15px;
-        }
-
-        .option h2 {
-            font-size: 18px;
-            margin: 0;
-            color: #333;
-        }
-
-        .option p {
-            margin: 5px 0;
-            color: #777;
-        }
-
-        .option .price {
-            font-weight: bold;
-            color: #ff4500;
-        }
-
-        .order-button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 16px;
-            background-color: #ff4500;
-            color: white;
-            text-align: center;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .order-button:hover {
-            background-color: #e03d00;
-        }
-
-        .instructions {
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
             margin-top: 20px;
-            font-size: 14px;
         }
 
-        .instructions li {
+        .service-item {
+            background-color: #ffffff;
+            border: 2px solid #cccccc;
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item img {
+            width: 100%;
+            height: auto;
             margin-bottom: 10px;
+        }
+
+        .service-item h2 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #222222;
+        }
+
+        .service-item p {
+            font-size: 18px;
+            color: #555555;
         }
 
         .footer {
             text-align: center;
             margin-top: 20px;
-            font-size: 12px;
-            color: #888;
+            background-color: #444444;
+            color: #ffffff;
+            padding: 20px 0;
         }
 
-        .product-page {
-            display: none;
-            text-align: center;
+        .footer p {
+            margin: 0;
         }
 
-        .product-page img {
-            margin-top: 20px;
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
+        .contact-info {
+            margin-top: 10px;
         }
 
-        .back-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 8px 16px;
-            background-color: #ccc;
-            color: white;
-            text-align: center;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .back-button:hover {
-            background-color: #aaa;
+        .contact-info img {
+            height: 40px;
+            margin: 5px;
+            vertical-align: middle;
         }
     </style>
 </head>
-
 <body>
-
     <div class="container">
+        <div class="header">
+            <h1>BC King's Commissions and Services</h1>
+        </div>
 
-        <div id="main-page">
-            <div class="header">
-                <h1>🎨 Roblox Avatar GFX Creation</h1>
-                <p>Starting at 5 Robux!</p>
+        <div class="services">
+            <div class="service-item">
+                <h2>YouTube Thumbnails</h2>
+                <img src="image_placeholder.jpg" alt="YouTube Thumbnails">
+                <p>$5 Each</p>
             </div>
 
-            <div class="option">
-                <h2>1. Custom Watermark</h2>
-                <p class="price">5 Robux</p>
-                <p>A custom transparent .png watermark to use on images or videos for people not to steal your content.</p>
-                <div class="order-button" onclick="showProduct('watermark')">Order</div>
+            <div class="service-item">
+                <h2>Stream Layout</h2>
+                <img src="image_placeholder.jpg" alt="Stream Layout">
+                <p>$20</p>
             </div>
 
-            <div class="option">
-                <h2>2. Transparent Render</h2>
-                <p class="price">6 Robux</p>
-                <p>No background, just your avatar in a clean, transparent render.</p>
-                <div class="order-button" onclick="showProduct('transparent')">Order</div>
+            <div class="service-item">
+                <h2>Channel Banner</h2>
+                <img src="image_placeholder.jpg" alt="Channel Banner">
+                <p>$10</p>
             </div>
 
-            <div class="option">
-                <h2>3. GFX with Background</h2>
-                <p class="price">10 Robux</p>
-                <p>Your avatar with a customized background.</p>
-                <div class="order-button" onclick="showProduct('background')">Order</div>
+            <div class="service-item">
+                <h2>Stream Highlight/Compilation Video</h2>
+                <img src="image_placeholder.jpg" alt="Stream Highlight">
+                <p>$15</p>
             </div>
 
-            <div class="option">
-                <h2>4. Custom Banner</h2>
-                <p class="price">15 Robux</p>
-                <p>A personalized banner featuring your avatar.</p>
-                <div class="order-button" onclick="showProduct('banner')">Order</div>
+            <div class="service-item">
+                <h2>Wallpaper/Background</h2>
+                <img src="image_placeholder.jpg" alt="Wallpaper">
+                <p>$10</p>
             </div>
 
-            <div class="option">
-                <h2>5. Creator’s Bundle</h2>
-                <p class="price">25 Robux</p>
-                <p>Includes a custom banner, profile picture, and a custom watermark.</p>
-                <div class="order-button" onclick="showProduct('bundle')">Order</div>
-            </div>
-
-            <div class="instructions">
-                <h2>How to Order:</h2>
-                <ul>
-                    <li><strong>DM me</strong> your Roblox avatar picture.</li>
-                    <li>Choose your preferred option from the menu.</li>
-                    <li>Payment is generally upfront, but if you're uncomfortable, I can send the GFX with a watermark first. After payment, I'll send the non-watermarked version.</li>
-                </ul>
-            </div>
-
-            <div class="footer">
-                <p>I will <strong>NOT</strong> ask for a .har file.</p>
+            <div class="service-item">
+                <h2>Voiceover/Voice Acting</h2>
+                <img src="image_placeholder.jpg" alt="Voiceover">
+                <p>$10-$20</p>
             </div>
         </div>
 
-        <!-- Product Pages -->
-        <div id="product-page-watermark" class="product-page">
-            <h1>Custom Watermark</h1>
-            <img src="https://i.ibb.co/gFBFjC6/Custom-Watermark.png" alt="Custom Watermark Sample">
-            <p>A custom transparent .png watermark to use on images or videos for people not to steal your content. This is perfect for protecting your creative work across various platforms.</p>
-            <a href="https://discord.com" class="order-button">Order on Discord</a>
-            <div class="back-button" onclick="showMain()">Back</div>
+        <div class="footer">
+            <p>Guaranteed 5-Star Service!</p>
+            <p class="contact-info">
+                <img src="cashapp_logo.png" alt="Cash App">
+                <img src="paypal_logo.png" alt="PayPal">
+                <img src="venmo_logo.png" alt="Venmo">
+            </p>
+            <p>Contact Info: @BCKingGames</p>
+            <p>Email: bckinggames@gmail.com</p>
         </div>
-
-        <div id="product-page-transparent" class="product-page">
-            <h1>Transparent Render</h1>
-            <img src="https://i.ibb.co/4ZyQnDd/Transparent-Render.png" alt="Transparent Render Sample">
-            <p>No background, just your avatar in a clean, transparent render. Ideal for creating versatile graphics that can be used anywhere without a distracting backdrop.</p>
-            <a href="https://discord.com" class="order-button">Order on Discord</a>
-            <div class="back-button" onclick="showMain()">Back</div>
-        </div>
-
-        <div id="product-page-background" class="product-page">
-            <h1>GFX with Background</h1>
-            <img src="https://i.ibb.co/Z65pNPd/GFX-with-Background.png" alt="GFX with Background Sample">
-            <p>Your avatar with a customized background. Perfect for making your avatar stand out in unique and personalized scenes.</p>
-            <a href="https://discord.com" class="order-button">Order on Discord</a>
-            <div class="back-button" onclick="showMain()">Back</div>
-        </div>
-
-        <div id="product-page-banner" class="product-page">
-            <h1>Custom Banner</h1>
-            <img src="https://i.ibb.co/png.4" alt="Custom Banner Sample">
-            <p>A personalized banner featuring your avatar. Great for enhancing your profile with a unique, customized design.</p>
-            <a href="https://discord.com" class="order-button">Order on Discord</a>
-            <div class="back-button" onclick="showMain()">Back</div>
-        </div>
-
-        <div id="product-page-bundle" class="product-page">
-            <h1>Creator’s Bundle</h1>
-            <p>Includes a custom banner, profile picture, and a custom watermark. The ultimate package for personalizing your online presence.</p>
-            <a href="https://discord.com" class="order-button">Order on Discord</a>
-            <div class="back-button" onclick="showMain()">Back</div>
-        </div>
-
     </div>
-
-    <script>
-        function showProduct(product) {
-            document.getElementById('main-page').style.display = 'none';
-            document.getElementById('product-page-' + product).style.display = 'block';
-        }
-
-        function showMain() {
-            const productPages = document.getElementsByClassName('product-page');
-            for (let i = 0; i < productPages.length; i++) {
-                productPages[i].style.display = 'none';
-            }
-            document.getElementById('main-page').style.display = 'block';
-        }
-    </script>
-
 </body>
-
 </html>
